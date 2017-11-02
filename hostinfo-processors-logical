@@ -1,21 +1,21 @@
 #!/bin/sh
 #
-# hostinfo-processors-logically-available:
+# hostinfo-processors-logical:
 # show how many processors are logically available
 #
 # Syntax:
 #
-#     hostinfo-processors-logically-available
+#     hostinfo-processors-logical
 #
 # Example:
 #
-#     $ hostinfo-processors-logically-available
+#     $ hostinfo-processors-logical
 #     4
 #
 #
 # ## Tracking
 #
-#   * Command: hostinfo-processors-logically-available
+#   * Command: hostinfo-processors-logical
 #   * Version: 1.0.0
 #   * Created: 2017-11-01
 #   * Updated: 2017-11-02

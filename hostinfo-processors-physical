@@ -1,21 +1,21 @@
 #!/bin/sh
 #
-# hostinfo-processors-physically-available:
+# hostinfo-processors-physical:
 # show how many processors are physically available
 #
 # Syntax:
 #
-#     hostinfo-processors-physically-available
+#     hostinfo-processors-physical
 #
 # Example:
 #
-#     $ hostinfo-processors-physically-available
+#     $ hostinfo-processors-physical
 #     4
 #
 #
 # ## Tracking
 #
-#   * Command: hostinfo-processors-physically-available
+#   * Command: hostinfo-processors-physical
 #   * Version: 1.0.0
 #   * Created: 2017-11-01
 #   * Updated: 2017-11-02
