@@ -1,4 +1,4 @@
-# Hostinfo commands for macOS
+# hostinfo commands for macOS
 
 Commands:
 
