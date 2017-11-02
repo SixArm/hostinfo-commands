@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# hostinfo-mach-factor:
+# show the hostinfo mach factor number
+#
+# Syntax:
+#
+#     hostinfo-mach-factor
+#
+# Example:
+#
+#     $ hostinfo-hostinfo-mach-factor
+#     2.34
+#
+#
+# ## Tracking
+#
+#   * Command: hostinfo-hostinfo-mach-factor
+#   * Version: 1.0.0
+#   * Created: 2017-11-01
+#   * Updated: 2017-11-02
+#   * License: GPL
+#   * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+##
+set -euf
+hostinfo | perl -n -e '/ Mach factor: ([\d\.]+)/ && print $1."\n" and exit'

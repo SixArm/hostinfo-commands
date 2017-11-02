@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# hostinfo-processor-type:
+# show the hostinfo processor type text
+#
+# Syntax:
+#
+#     hostinfo-processor-type
+#
+# Example:
+#
+#     $ hostinfo-processor-type
+#     x86_64h (Intel x86-64h Haswell)
+#
+#
+# ## Tracking
+#
+#   * Command: hostinfo-processor-type
+#   * Version: 1.0.0
+#   * Created: 2017-11-01
+#   * Updated: 2017-11-02
+#   * License: GPL
+#   * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+##
+set -euf
+hostinfo | perl -n -e '/^Processor type: (.*)/ && print $1."\n" and exit'

@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# hostinfo-primary-memory-available:
+# show the hostinfo primary memory available text
+#
+# Syntax:
+#
+#     hostinfo-primary-memory-available
+#
+# Example:
+#
+#     $ hostinfo-primary-memory-available
+#     16.00 gigabytes
+#
+#
+# ## Tracking
+#
+#   * Command: hostinfo-primary-memory-available
+#   * Version: 1.0.0
+#   * Created: 2017-11-01
+#   * Updated: 2017-11-02
+#   * License: GPL
+#   * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+##
+set -euf
+hostinfo | perl -n -e '/^Primary memory available: (.*)/ && print $1."\n" and exit'

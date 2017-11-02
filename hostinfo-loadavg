@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# hostinfo-loadavg:
+# show the hostinfo load average number
+#
+# Syntax:
+#
+#     hostinfo-loadavg    
+#
+# Example:
+#
+#     $ hostinfo-loadavg
+#     1.23
+#
+#
+# ## Tracking
+#
+#   * Command: hostinfo-loadavg
+#   * Version: 1.0.0
+#   * Created: 2017-11-01
+#   * Updated: 2017-11-02
+#   * License: GPL
+#   * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+##
+set -euf
+hostinfo | perl -n -e '/^Load average: ([\d\.]+)/ && print $1."\n" and exit'
