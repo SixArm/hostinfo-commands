@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# hostinfo-loadavg-logical:
+# show the hostinfo load average per logical processor
+#
+# Syntax:
+#
+#     hostinfo-loadavg-logical
+#
+# Example:
+#
+#     $ hostinfo-loadavg-logical
+#     0.30
+#
+#
+# ## Tracking
+#
+#   * Command: hostinfo-loadavg-logical
+#   * Version: 1.0.0
+#   * Created: 2017-11-01
+#   * Updated: 2017-11-02
+#   * License: GPL
+#   * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+##
+set -euf
+echo "scale=2; $(hostinfo-loadavg) / $(hostinfo-processors-logical)" | bc -l

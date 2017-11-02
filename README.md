@@ -3,7 +3,11 @@
 Commands:
 
 * [`hostinfo-loadavg`](hostinfo-loadavg): What is the processor load average number?
+* [`hostinfo-loadavg-logical`](hostinfo-loadavg-logical): What is the processor load average per logical processor?
+* [`hostinfo-loadavg-physical`](hostinfo-loadavg-logical): What is the processor load average per physical processor?
 * [`hostinfo-mach-factor`](hostinfo-mach-factor): What is the processor mach factor number?
+* [`hostinfo-mach-factor-logical`](hostinfo-mach-factor-logical): What is the processor mach factor per logical processor?
+* [`hostinfo-mach-factor-physical`](hostinfo-mach-factor-physical): What is the processor mach factor per physical processor?
 * [`hostinfo-primary-memory-available`](hostinfo-primary-memory-available): How much primary memory is available?
 * [`hostinfo-processor-type`](hostinfo-processor-type): What is the processor type?
 * [`hostinfo-processors-logical`](hostinfo-processors-logical): How many processors are logically available?
@@ -12,10 +16,10 @@ Commands:
 Examples:
 
     $ hostinfo-loadavg
-    1.23
+    1.20
 
     $ hostinfo-mach-factor
-    2.34
+    2.40
 
     $ hostinfo-primary-memory-available
     16.00 gigabytes
@@ -26,8 +30,8 @@ Examples:
     $ hostinfo-processors-logical
     4
 
-	$ hostinfo-processors-physical
-	2
+    $ hostinfo-processors-physical
+    2
 
 
 ## Tracking

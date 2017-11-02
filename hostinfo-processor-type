@@ -1,7 +1,7 @@
 #!/bin/sh
 #
-# hostinfo-loadavg-logical:
-# show the hostinfo loadavg per logical processor
+# hostinfo-processor-type:
+# show the hostinfo processor type text
 #
 # Syntax:
 #
@@ -9,8 +9,8 @@
 #
 # Example:
 #
-#     $ hostinfo-loadavg-logical
-#     0.85
+#     $ hostinfo-processor-type
+#     x86_64h (Intel x86-64h Haswell)
 #
 #
 # ## Tracking
@@ -23,12 +23,4 @@
 #   * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 ##
 set -euf
-hostinfo  | perl -e '
-while(<>){ 
-  $loadavg = $1 if /Load average: ([\d\.]+)/; 
-  $processors = $1 if /^(\d+) processors are physically available/; 
-} 
-print $loadavg . "\n";
-print $processors . "\n";
-print $loadavg/$processors;
-'
+hostinfo | perl -n -e '/^Processor type: (.*)/ && print $1."\n" and exit'
